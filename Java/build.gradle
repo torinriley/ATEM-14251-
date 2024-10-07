@@ -1,0 +1,5 @@
+dependencies {
+    implementation 'org.firstinspires.ftc:RobotCore:8.1.0'
+    
+    implementation 'org.tensorflow:tensorflow-lite:2.7.0'
+}
