@@ -1,0 +1,254 @@
+{
+    "tasks": [
+        {
+            "name": "Level 2 Ascent",
+            "points": 12,
+            "time": 19
+        },
+        {
+            "name": "Net Zone",
+            "points": 2,
+            "time": 6
+        },
+        {
+            "name": "Level 2 Ascent",
+            "points": 12,
+            "time": 17
+        },
+        {
+            "name": "Level 1 Ascent",
+            "points": 4,
+            "time": 11
+        },
+        {
+            "name": "High Chamber",
+            "points": 15,
+            "time": 11
+        },
+        {
+            "name": "High Chamber",
+            "points": 10,
+            "time": 14
+        },
+        {
+            "name": "Observation Zone",
+            "points": 2,
+            "time": 4
+        },
+        {
+            "name": "High Chamber",
+            "points": 11,
+            "time": 11
+        },
+        {
+            "name": "Level 1 Ascent",
+            "points": 5,
+            "time": 15
+        },
+        {
+            "name": "Level 2 Ascent",
+            "points": 14,
+            "time": 16
+        },
+        {
+            "name": "Level 1 Ascent",
+            "points": 5,
+            "time": 14
+        },
+        {
+            "name": "Low Basket",
+            "points": 7,
+            "time": 7
+        },
+        {
+            "name": "Level 1 Ascent",
+            "points": 5,
+            "time": 11
+        },
+        {
+            "name": "Level 3 Ascent",
+            "points": 30,
+            "time": 24
+        },
+        {
+            "name": "High Chamber",
+            "points": 12,
+            "time": 15
+        },
+        {
+            "name": "Low Chamber",
+            "points": 10,
+            "time": 9
+        },
+        {
+            "name": "Level 3 Ascent",
+            "points": 27,
+            "time": 21
+        },
+        {
+            "name": "Observation Zone",
+            "points": 1,
+            "time": 2
+        },
+        {
+            "name": "Level 3 Ascent",
+            "points": 30,
+            "time": 21
+        },
+        {
+            "name": "Low Basket",
+            "points": 5,
+            "time": 6
+        },
+        {
+            "name": "High Basket",
+            "points": 8,
+            "time": 7
+        },
+        {
+            "name": "Observation Zone",
+            "points": 1,
+            "time": 3
+        },
+        {
+            "name": "High Basket",
+            "points": 8,
+            "time": 9
+        },
+        {
+            "name": "High Chamber",
+            "points": 10,
+            "time": 11
+        },
+        {
+            "name": "Low Chamber",
+            "points": 10,
+            "time": 9
+        },
+        {
+            "name": "Level 2 Ascent",
+            "points": 20,
+            "time": 17
+        },
+        {
+            "name": "Low Basket",
+            "points": 6,
+            "time": 5
+        },
+        {
+            "name": "Low Basket",
+            "points": 4,
+            "time": 5
+        },
+        {
+            "name": "Level 2 Ascent",
+            "points": 16,
+            "time": 20
+        },
+        {
+            "name": "Net Zone",
+            "points": 3,
+            "time": 5
+        },
+        {
+            "name": "Observation Zone",
+            "points": 2,
+            "time": 5
+        },
+        {
+            "name": "Level 2 Ascent",
+            "points": 16,
+            "time": 15
+        },
+        {
+            "name": "Level 1 Ascent",
+            "points": 3,
+            "time": 13
+        },
+        {
+            "name": "Low Chamber",
+            "points": 12,
+            "time": 9
+        },
+        {
+            "name": "High Chamber",
+            "points": 14,
+            "time": 15
+        },
+        {
+            "name": "Low Basket",
+            "points": 5,
+            "time": 7
+        },
+        {
+            "name": "Level 3 Ascent",
+            "points": 30,
+            "time": 24
+        },
+        {
+            "name": "Level 1 Ascent",
+            "points": 5,
+            "time": 14
+        },
+        {
+            "name": "Low Chamber",
+            "points": 8,
+            "time": 8
+        },
+        {
+            "name": "Level 2 Ascent",
+            "points": 13,
+            "time": 15
+        },
+        {
+            "name": "High Basket",
+            "points": 8,
+            "time": 6
+        },
+        {
+            "name": "High Chamber",
+            "points": 11,
+            "time": 15
+        },
+        {
+            "name": "Low Basket",
+            "points": 7,
+            "time": 4
+        },
+        {
+            "name": "Low Chamber",
+            "points": 8,
+            "time": 8
+        },
+        {
+            "name": "Level 1 Ascent",
+            "points": 5,
+            "time": 10
+        },
+        {
+            "name": "Low Basket",
+            "points": 4,
+            "time": 4
+        },
+        {
+            "name": "Low Basket",
+            "points": 7,
+            "time": 7
+        },
+        {
+            "name": "High Chamber",
+            "points": 12,
+            "time": 15
+        },
+        {
+            "name": "Net Zone",
+            "points": 4,
+            "time": 4
+        },
+        {
+            "name": "Observation Zone",
+            "points": 1,
+            "time": 3
+        }
+    ]
+}
