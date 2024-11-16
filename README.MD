@@ -1,12 +1,3 @@
-
-
-
-
-
-
-<img alt="atem" src="other/atem.png" width="600" height="200" style="padding: 20px; display: block; margin-left: auto; margin-right: auto;"/>
-
-
 # ATEM - Adaptive Task Execution Model
 
 ---
