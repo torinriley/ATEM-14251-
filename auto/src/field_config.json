@@ -1,0 +1,12 @@
+{
+    "field_width": 6,
+    "field_height": 6,
+    "non_traversable": [
+        [2, 2], [2, 3], [3, 2], [3, 3]
+    ],
+    "points_of_interest": {
+        "blue_scoring_zone": [0, 5],
+        "red_scoring_zone": [5, 0],
+        "neutral_zone": [3, 3]
+    }
+}
