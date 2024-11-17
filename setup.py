@@ -1,11 +1,18 @@
 from setuptools import setup, find_packages
+import os
+
+# Read the README.md file
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
 setup(
-    name="atem",
-    version="1.2.0",
+    name="atem_core",
+    version="1.2.1",
     author="Torin Etheridge",
     author_email="torinriley220@gmail.com",
     description="A Python package for adaptive task execution and machine learning integration.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/CapitalRobotics/ATEM.git",
     packages=find_packages(include=["package", "package.*"]),
     include_package_data=True,
@@ -21,7 +28,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "atem-interpreter=atem_core.interpreter:main",
+            "atem-interpreter=package.interpreter:main",
         ],
     },
 )
