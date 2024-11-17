@@ -1,6 +1,4 @@
 ![PyPI](https://img.shields.io/pypi/v/atem_core)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/atem_core)
-![GitHub contributors](https://img.shields.io/github/contributors/CapitalRobotics/ATEM)
 ![GitHub last commit](https://img.shields.io/github/last-commit/CapitalRobotics/ATEM)
 
 # ATEM - Adaptive Task Execution Model
