@@ -1,3 +1,4 @@
+
 # ATEM - Adaptive Task Execution Model
 
 ---
@@ -140,4 +141,4 @@ The Adaptive Task Prediction Model utilizes a TensorFlow Lite (TFLite) model for
 - Predicts the next task to perform.
 - Scores all potential tasks to indicate confidence levels.
 - The robot executes the predicted task with the highest score.
-- The process repeats, ensuring continuous adaptation to changing environments and constraints.
+
