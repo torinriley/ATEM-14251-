@@ -1,28 +1,17 @@
+import json
 import numpy as np
 import tensorflow as tf
-import json
+from train import create_task_encoder, generate_task_orders
 
+# Paths for the task JSON and TFLite model
 TASK_JSON_PATH = "tasks.json"
-TFLITE_MODEL_PATH = "../models/auto_task_optimizer.tflite"
-
-def load_tasks(file_path):
-    with open(file_path, "r") as file:
-        data = json.load(file)
-    return data["tasks"]
-
-def create_task_encoder(tasks):
-    task_names = sorted(set(task["name"].strip() for task in tasks))
-    task_to_index = {name: idx for idx, name in enumerate(task_names)}
-    index_to_task = {idx: name for name, idx in task_to_index.items()}
-    return task_to_index, index_to_task
-
-def encode_task_order(task_order, task_to_index, max_length):
-    encoded_order = [task_to_index[task["name"]] for task in task_order]
-    padded_order = np.pad(encoded_order, (0, max_length - len(encoded_order)), constant_values=0)
-    return padded_order
+TFLITE_MODEL_PATH = "models/auto_task_optimizer.tflite"
 
 def interpret_model(task_order, task_to_index, index_to_task, max_length):
-    # Load the TFLite model
+    """
+    Interpret the TFLite model to get the predicted score and task names for a given task order.
+    """
+    print("Loading TensorFlow Lite model...")
     interpreter = tf.lite.Interpreter(model_path=TFLITE_MODEL_PATH)
     interpreter.allocate_tensors()
 
@@ -30,44 +19,51 @@ def interpret_model(task_order, task_to_index, index_to_task, max_length):
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()
 
-    # Debug: Show input details
-    print("Input Details:", input_details)
+    # Encode and pad the task order
+    encoded_order = [task_to_index[task["name"]] for task in task_order]
+    padded_order = np.pad(encoded_order, (0, max_length - len(encoded_order)), constant_values=0)
 
-    # Encode the task order
-    padded_order = encode_task_order(task_order, task_to_index, max_length)
+    # Prepare input data
+    input_data = np.array([padded_order], dtype=np.float32)
+    interpreter.set_tensor(input_details[0]['index'], input_data)
 
-    # Prepare inputs
-    input_data_orders = np.array([padded_order], dtype=np.float32)
-
-    # Set inputs and run the model
-    interpreter.set_tensor(input_details[0]['index'], input_data_orders)
+    # Run inference
     interpreter.invoke()
+    predicted_score = interpreter.get_tensor(output_details[0]['index'])[0][0]
 
-    # Get the predicted score
-    output_data = interpreter.get_tensor(output_details[0]['index'])
-    predicted_score = output_data[0][0]
+    # Map indices back to task names
+    task_names = [index_to_task[idx] for idx in encoded_order]
 
-    # Map indices back to task names for human-readable task order
-    human_readable_tasks = [index_to_task[idx] for idx in padded_order if idx in index_to_task]
-
-    return predicted_score, human_readable_tasks
+    return float(predicted_score), task_names  # Convert NumPy float32 to Python float
 
 
 if __name__ == "__main__":
-    # Load tasks and prepare encoder
-    tasks = load_tasks(TASK_JSON_PATH)
+    print("Loading tasks...")
+    tasks = json.load(open(TASK_JSON_PATH))["tasks"]
+
+    print("Creating task encoders...")
     task_to_index, index_to_task = create_task_encoder(tasks)
 
-    # Example task order for testing
-    max_length = 5
-    sample_task_order = [
-        {"name": "High Basket", "time": 10},
-        {"name": "Low Chamber", "time": 8},
-        {"name": "Observation Zone", "time": 5},
-    ]
+    print("Generating a sample task order...")
+    max_length = 5  # Example max length
+    sample_task_order, _, _ = generate_task_orders(tasks, num_samples=1, time_limit=30)
 
-    # Interpret the model
-    predicted_score, human_readable_tasks = interpret_model(sample_task_order, task_to_index, index_to_task, max_length)
+    # Use the first sample task order
+    sample_task_order = sample_task_order[0]
 
-    print(f"Predicted Score: {predicted_score}")
-    print(f"Task Order: {human_readable_tasks}")
+    print("Interpreting the model...")
+    predicted_score, task_names = interpret_model(sample_task_order, task_to_index, index_to_task, max_length)
+
+    # Prepare JSON output
+    output = {
+        "predicted_score": predicted_score,  # Python float is JSON serializable
+        "task_order": task_names
+    }
+
+    # Save to a JSON file
+    output_path = "interpreted_task_order.json"
+    with open(output_path, "w") as json_file:
+        json.dump(output, json_file, indent=4)
+
+    print(f"Results written to {output_path}")
+    print(json.dumps(output, indent=4))
