@@ -1,3 +1,6 @@
+![PyPI](https://img.shields.io/pypi/v/atem)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/atem)
+
 # ATEM - Adaptive Task Execution Model
 
 ---
