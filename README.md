@@ -2,7 +2,110 @@
 # ATEM - Adaptive Task Execution Model
 
 ---
-**ATEM** (Adaptive Task Execution Model) is a machine learning-based project designed to determine the optimal sequence of tasks to maximize points in the autonomous phase of FTC robotics competitions. The project utilizes TensorFlow and TensorFlow Lite for efficient model deployment.
+
+# Getting Started with ATEM
+Welcome to ATEM, the adaptive task execution and machine learning package designed for FTC robotics and beyond. Follow this quick-start guide to get up and running with ATEM in your project.
+
+## 1. Install ATEM
+
+```bash 
+pip install atem
+```
+
+## 2. Train a Model in Python
+ATEM provides a Python API to train a TensorFlow Lite model based on your tasks.
+
+- Create a tasks.json file to define the tasks your robot will perform. Here’s an example:
+```json
+{
+  "tasks": [
+    { "name": "Observation Zone", "time": 5, "points": 3 },
+    { "name": "Net Zone", "time": 4, "points": 2 },
+    { "name": "Low Basket", "time": 5, "points": 4 },
+    { "name": "High Basket", "time": 7, "points": 9 }
+  ]
+}
+```
+- Train a Model
+Use the following Python script to train and save a TensorFlow Lite model:
+
+```python
+from atem.model_train import ModelTrainer
+
+# Paths to tasks file and output model
+tasks_file = "tasks.json"
+output_model_path = "adaptive_model.tflite"
+
+# Initialize ModelTrainer
+trainer = ModelTrainer(tasks_file=tasks_file, output_model_path=output_model_path)
+
+# Train the model and save it
+trainer.train_and_save_model(epochs=20, batch_size=16)
+
+print("Task-to-index mappings:")
+print(trainer.get_task_mappings())
+```
+
+## 3. Integrate the Model in Java
+ATEM models can be integrated into Java-based FTC projects using TensorFlow Lite for inference.
+
+- **Step 1: Add TensorFlow Lite Dependencies**
+
+```gradle
+dependencies {
+    implementation 'org.tensorflow:tensorflow-lite:2.11.0'
+}
+```
+
+- **Step 2: Include the Trained Model in Your Project**
+Place the adaptive_model.tflite file in the assets directory of your FTC project:
+
+`TeamCode/src/main/assets/adaptive_model.tflite`
+
+- **Step 3: Implement Model Inference**
+Use the following Java code to interpret the trained model:
+
+```java
+import org.tensorflow.lite.Interpreter;
+import java.nio.ByteBuffer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Map;
+
+public class ATEMModelInterpreter {
+    private final Interpreter interpreter;
+
+    public ATEMModelInterpreter(String modelPath) throws Exception {
+        ByteBuffer modelBuffer = ByteBuffer.wrap(Files.readAllBytes(Paths.get(modelPath)));
+        this.interpreter = new Interpreter(modelBuffer);
+    }
+
+    public String predictNextTask(String currentTask, Map<String, Double> sensorData, 
+                                  Map<String, Integer> taskToIndex, Map<Integer, String> indexToTask, int maxLength) {
+        // Implement inference logic here using ATEM-trained model
+        return "Low Basket"; // Replace with actual implementation
+    }
+}
+```
+
+
+## 4. Example Usage in an FTC Project
+Use the trained model to predict and execute tasks dynamically.
+
+- **Step 1: Initialize the Model Interpreter**
+```java
+ATEMModelInterpreter modelInterpreter = new ATEMModelInterpreter("adaptive_model.tflite");
+```
+
+- **Step 2: Use Predictions to Execute Tasks**
+```java
+String nextTask = modelInterpreter.predictNextTask(currentTask, sensorData, taskToIndex, indexToTask, 5);
+System.out.println("Predicted Next Task: " + nextTask);
+```
+## All set!
+
+---
+
 
 
 
