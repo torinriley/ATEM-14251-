@@ -1,7 +1,7 @@
 import json
 import numpy as np
 import tensorflow as tf
-from train2 import create_task_encoder
+from atem_core.core.train import create_task_encoder
 
 # Paths for the task JSON and TFLite model
 TASK_JSON_PATH = "tasks.json"

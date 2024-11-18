@@ -142,3 +142,120 @@ The Adaptive Task Prediction Model utilizes a TensorFlow Lite (TFLite) model for
 - Scores all potential tasks to indicate confidence levels.
 - The robot executes the predicted task with the highest score.
 
+
+# ATEM: Adaptive Task Execution and Machine Learning Package Documentation
+
+ATEM is a Python package designed for adaptive task execution in robotics and AI applications. It provides tools for training machine learning models, interpreting task sequences, and generating optimal task orders for various scenarios.
+
+## Features
+- **Adaptive Task Model**: Predict the next task based on sensor data and task history.
+- **Task Training**: Train custom machine learning models using a `tasks.json` file.
+- **Real-time Adaptation**: Simulate real-world scenarios for task execution.
+- **Pathfinding Integration**: Extendable for integration with A* pathfinding for robotics.
+- **Lightweight TensorFlow Lite Integration**: For efficient model inference.
+
+---
+
+## Installation
+
+```bash
+pip install atem
+```
+---
+
+## Quick Start Guide
+1. **Preparing the tasks.json File**
+The tasks.json file defines the tasks and their attributes.
+
+Example
+```json
+{
+    "tasks": [
+        {"name": "Task 1", "points": 10, "time": 5},
+        {"name": "Task 2", "points": 20, "time": 15},
+        {"name": "Task 3", "points": 15, "time": 10}
+    ]
+}
+```
+2. **Training a Model**
+Use the ModelTrainer class to train a TensorFlow Lite model.
+
+Example
+```python
+from atem.model_train import ModelTrainer
+
+trainer = ModelTrainer(tasks_file="tasks.json", output_model_path="adaptive_model.tflite")
+trainer.train_and_save_model(epochs=20, batch_size=16)
+
+```
+
+3. **Interpreting Tasks**
+Use the AdaptiveModel class to interpret task sequences and predict the next task.
+
+Example
+```python
+from atem import AdaptiveModel
+
+model = AdaptiveModel(model_path="adaptive_model.tflite")
+
+task_to_index = {"Task 1": 0, "Task 2": 1, "Task 3": 2}
+index_to_task = {0: "Task 1", 1: "Task 2", 2: "Task 3"}
+current_task = "Task 1"
+sensor_data = {
+    "time_elapsed": 20,
+    "distance_to_target": 1.2,
+    "gyro_angle": 45,
+    "battery_level": 80
+}
+predicted_task, scores = model.predict_next_task(
+    current_task=current_task,
+    sensor_data=sensor_data,
+    task_to_index=task_to_index,
+    index_to_task=index_to_task,
+    max_length=5
+)
+
+print(f"Predicted Next Task: {predicted_task}")
+print(f"Task Scores: {scores}")
+
+```
+
+---
+
+## API Reference
+
+### 1. AdaptiveModel
+
+
+__init__(model_path: str)
+- Initialize the adaptive model with a TFLite model path.
+
+predict_next_task(...)
+- Predict the next task based on the current task and sensor data.
+
+### 2. ModelTrainer
+
+
+__init__(tasks_file: str, output_model_path: str)
+- Initialize the trainer with tasks and an output model path.
+
+
+train_and_save_model(epochs: int, batch_size: int)
+- Train the model and save it as a TFLite file.
+
+set_max_length(max_length: int)
+- Set the maximum sequence length for task encoding and padding.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
