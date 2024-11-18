@@ -1,5 +1,4 @@
-![PyPI](https://img.shields.io/pypi/v/atem_core)
-![GitHub last commit](https://img.shields.io/github/last-commit/CapitalRobotics/ATEM)
+[![PyPI](https://img.shields.io/pypi/v/atem)](https://pypi.org/project/atem/)
 [![CodeQL Advanced](https://github.com/CapitalRobotics/ATEM/actions/workflows/codeql.yml/badge.svg)](https://github.com/CapitalRobotics/ATEM/actions/workflows/codeql.yml)
 
 
