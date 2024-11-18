@@ -1,20 +1,19 @@
 from setuptools import setup, find_packages
-import os
 
-# Read the README.md file
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+# Read the long description from README.md
+with open("README.md", "r", encoding="utf-8") as f:
+    long_description = f.read()
 
 setup(
-    name="atem_core",
-    version="1.2.1",
+    name="atem",
+    version="1.2.5",
     author="Torin Etheridge",
     author_email="torinriley220@gmail.com",
-    description="A Python package for adaptive task execution and machine learning integration.",
+    description="Adaptive task execution and machine learning package.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/CapitalRobotics/ATEM.git",
-    packages=find_packages(include=["package", "package.*"]),
+    url="https://github.com/CapitalRobotics/ATEM",
+    packages=find_packages(include=["atem", "atem.*"]),
     include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -25,10 +24,6 @@ setup(
     install_requires=[
         "tensorflow>=2.0.0",
         "numpy>=1.18.0",
+        "colorama>=0.4.6"
     ],
-    entry_points={
-        "console_scripts": [
-            "atem-interpreter=package.interpreter:main",
-        ],
-    },
 )
