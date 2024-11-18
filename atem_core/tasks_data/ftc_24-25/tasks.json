@@ -1,0 +1,31 @@
+{
+  "tasks": [
+    { "name": "Observation Zone", "time": 5, "points": 3 },
+    { "name": "Observation Zone", "time": 6, "points": 3 },
+    { "name": "Observation Zone", "time": 7, "points": 3 },
+    { "name": "Net Zone", "time": 3, "points": 2 },
+    { "name": "Net Zone", "time": 4, "points": 2 },
+    { "name": "Net Zone", "time": 5, "points": 2 },
+    { "name": "Low Basket", "time": 4, "points": 4 },
+    { "name": "Low Basket", "time": 5, "points": 4 },
+    { "name": "Low Basket", "time": 6, "points": 4 },
+    { "name": "High Basket", "time": 6, "points": 8 },
+    { "name": "High Basket", "time": 7, "points": 8 },
+    { "name": "High Basket", "time": 8, "points": 8 },
+    { "name": "Low Chamber", "time": 8, "points": 6 },
+    { "name": "Low Chamber", "time": 9, "points": 6 },
+    { "name": "Low Chamber", "time": 10, "points": 6 },
+    { "name": "High Chamber", "time": 10, "points": 10 },
+    { "name": "High Chamber", "time": 11, "points": 10 },
+    { "name": "High Chamber", "time": 12, "points": 10 },
+    { "name": "Level 1 Ascent", "time": 7, "points": 3 },
+    { "name": "Level 1 Ascent", "time": 8, "points": 3 },
+    { "name": "Level 1 Ascent", "time": 9, "points": 3 },
+    { "name": "Level 2 Ascent", "time": 15, "points": 15 },
+    { "name": "Level 2 Ascent", "time": 16, "points": 15 },
+    { "name": "Level 2 Ascent", "time": 17, "points": 15 },
+    { "name": "Level 3 Ascent", "time": 20, "points": 30 },
+    { "name": "Level 3 Ascent", "time": 21, "points": 30 },
+    { "name": "Level 3 Ascent", "time": 22, "points": 30 }
+  ]
+}
