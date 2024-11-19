@@ -7,7 +7,7 @@ from colorama import Fore, Style, init
 init(autoreset=True)
 
 class ModelTrainer:
-    def __init__(self, tasks_file, output_model_path="trained_model.tflite"):
+    def __init__(self, tasks_file, output_model_path="atem.tflite"):
         """
         Initialize the ModelTrainer with a tasks file and output model path.
 

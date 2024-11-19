@@ -1,9 +1,8 @@
 {
-    "predicted_score": 20.808395385742188,
+    "predicted_score": 22.341062545776367,
     "task_order": [
-        "Low Chamber",
+        "High Chamber",
         "Level 1 Ascent",
-        "Net Zone",
-        "Observation Zone"
+        "Low Basket"
     ]
 }
