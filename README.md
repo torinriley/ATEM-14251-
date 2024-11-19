@@ -4,7 +4,7 @@
 
 [![PyPI](https://img.shields.io/pypi/v/atem)](https://pypi.org/project/atem/)
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
-[![CodeQL Advanced](https://github.com/CapitalRobotics/ATEM/actions/workflows/codeql.yml/badge.svg)](https://github.com/CapitalRobotics/ATEM/actions/workflows/codeql.yml)
+[![CodeQL](https://github.com/CapitalRobotics/ATEM/actions/workflows/codeql.yml/badge.svg)](https://github.com/CapitalRobotics/ATEM/actions/workflows/codeql.yml)
 [![Python Package CI](https://github.com/CapitalRobotics/ATEM/actions/workflows/tests.yml/badge.svg)](https://github.com/CapitalRobotics/ATEM/actions/workflows/tests.yml)
 
 
