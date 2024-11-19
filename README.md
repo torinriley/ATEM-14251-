@@ -2,6 +2,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
 [![CodeQL](https://github.com/CapitalRobotics/ATEM/actions/workflows/codeql.yml/badge.svg)](https://github.com/CapitalRobotics/ATEM/actions/workflows/codeql.yml)
 [![Python Package CI](https://github.com/CapitalRobotics/ATEM/actions/workflows/tests.yml/badge.svg)](https://github.com/CapitalRobotics/ATEM/actions/workflows/tests.yml)
+[![Dependency Update](https://github.com/torinriley/ATEM-14251-/actions/workflows/dependency.yml/badge.svg)](https://github.com/torinriley/ATEM-14251-/actions/workflows/dependency.yml)
 
 
 # ATEM - Adaptive Task Execution Model
