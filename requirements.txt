@@ -6,4 +6,4 @@ setuptools~=75.5.0
 atem~=1.2.0
 
 pytest~=8.3.3
-atem_core~=1.1.1
+atem
