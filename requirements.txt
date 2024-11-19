@@ -4,3 +4,4 @@ scikit-learn
 colorama~=0.4.6
 setuptools~=75.5.0
 atem
+pytest
