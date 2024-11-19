@@ -1,5 +1,7 @@
 import heapq
+import matplotlib.pyplot as plt
 import json
+
 
 class AStar:
     def __init__(self, field_config):
@@ -8,7 +10,6 @@ class AStar:
         self.non_traversable = set(tuple(x) for x in field_config["non_traversable"])
 
     def heuristic(self, a, b):
-        # Manhattan distance heuristic
         return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
     def neighbors(self, node):
@@ -17,8 +18,8 @@ class AStar:
         for dx, dy in directions:
             neighbor = (node[0] + dx, node[1] + dy)
             if (0 <= neighbor[0] < self.width and
-                0 <= neighbor[1] < self.height and
-                neighbor not in self.non_traversable):
+                    0 <= neighbor[1] < self.height and
+                    neighbor not in self.non_traversable):
                 result.append(neighbor)
         return result
 

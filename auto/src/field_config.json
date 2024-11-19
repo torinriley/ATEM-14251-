@@ -1,12 +1,32 @@
 {
-    "field_width": 6,
-    "field_height": 6,
+    "field_width": 12,
+    "field_height": 12,
     "non_traversable": [
-        [2, 2], [2, 3], [3, 2], [3, 3]
+        [2, 2], [2, 3], [3, 2], [3, 3],
+        [5, 5], [5, 6], [6, 5], [6, 6],
+        [0, 6], [1, 6], [0, 7], [1, 7],
+        [10, 5], [11, 5], [10, 6], [11, 6], [4, 3]
     ],
     "points_of_interest": {
-        "blue_scoring_zone": [0, 5],
-        "red_scoring_zone": [5, 0],
-        "neutral_zone": [3, 3]
+        "blue_scoring_zone": {
+            "coordinates": [1, 11],
+            "description": "Blue alliance scoring area."
+        },
+        "red_scoring_zone": {
+            "coordinates": [11, 1],
+            "description": "Red alliance scoring area."
+        },
+        "neutral_zone": {
+            "coordinates": [6, 6],
+            "description": "Shared neutral zone for both alliances."
+        },
+        "blue_start_zone": {
+            "coordinates": [1, 1],
+            "description": "Starting location for blue alliance."
+        },
+        "red_start_zone": {
+            "coordinates": [10, 10],
+            "description": "Starting location for red alliance."
+        }
     }
 }

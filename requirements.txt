@@ -3,4 +3,7 @@ numpy~=2.0.2
 scikit-learn
 colorama~=0.4.6
 setuptools~=75.5.0
-atem
+atem~=1.2.0
+
+matplotlib~=3.9.2
+atem_core~=1.1.1
