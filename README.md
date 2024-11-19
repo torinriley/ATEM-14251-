@@ -1,3 +1,7 @@
+![atem copy](https://github.com/user-attachments/assets/babc20dd-2b91-4157-9603-692f919170fa)
+
+
+
 [![PyPI](https://img.shields.io/pypi/v/atem)](https://pypi.org/project/atem/)
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
 [![CodeQL Advanced](https://github.com/CapitalRobotics/ATEM/actions/workflows/codeql.yml/badge.svg)](https://github.com/CapitalRobotics/ATEM/actions/workflows/codeql.yml)
