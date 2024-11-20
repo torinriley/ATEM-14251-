@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setup(
     name="atem",
-    version="1.2.5",
+    version="1.2.7",
     author="Torin Etheridge",
     author_email="torinriley220@gmail.com",
     description="Adaptive task execution and machine learning package.",
