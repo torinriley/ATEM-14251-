@@ -23,7 +23,7 @@ gast==0.6.0
     # via tensorflow
 google-pasta==0.2.0
     # via tensorflow
-grpcio==1.68.0
+grpcio==1.68.1
     # via
     #   tensorboard
     #   tensorflow
@@ -68,7 +68,7 @@ packaging==24.2
     #   keras
     #   tensorboard
     #   tensorflow
-protobuf==5.29.0
+protobuf==5.29.1
     # via
     #   tensorboard
     #   tensorflow
@@ -78,7 +78,7 @@ requests==2.32.3
     # via tensorflow
 rich==13.9.4
     # via keras
-six==1.16.0
+six==1.17.0
     # via
     #   astunparse
     #   google-pasta
