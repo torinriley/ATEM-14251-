@@ -68,7 +68,7 @@ packaging==24.2
     #   keras
     #   tensorboard
     #   tensorflow
-protobuf==5.29.1
+protobuf==5.29.2
     # via
     #   tensorboard
     #   tensorflow
