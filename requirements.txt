@@ -17,13 +17,13 @@ charset-normalizer==3.4.1
     # via requests
 colorama==0.4.6
     # via atem (setup.py)
-flatbuffers==24.12.23
+flatbuffers==25.1.24
     # via tensorflow
 gast==0.6.0
     # via tensorflow
 google-pasta==0.2.0
     # via tensorflow
-grpcio==1.69.0
+grpcio==1.70.0
     # via
     #   tensorboard
     #   tensorflow
