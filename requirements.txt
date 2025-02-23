@@ -27,7 +27,7 @@ grpcio==1.70.0
     # via
     #   tensorboard
     #   tensorflow
-h5py==3.12.1
+h5py==3.13.0
     # via
     #   keras
     #   tensorflow
