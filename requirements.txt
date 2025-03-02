@@ -61,7 +61,7 @@ numpy==2.0.2
     #   tensorflow
 opt-einsum==3.4.0
     # via tensorflow
-optree==0.14.0
+optree==0.14.1
     # via keras
 packaging==24.2
     # via
