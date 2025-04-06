@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-absl-py==2.2.1
+absl-py==2.2.2
     # via
     #   keras
     #   tensorboard
@@ -33,7 +33,7 @@ h5py==3.13.0
     #   tensorflow
 idna==3.10
     # via requests
-keras==3.9.1
+keras==3.9.2
     # via tensorflow
 libclang==18.1.1
     # via tensorflow
@@ -76,7 +76,7 @@ pygments==2.19.1
     # via rich
 requests==2.32.3
     # via tensorflow
-rich==13.9.4
+rich==14.0.0
     # via keras
 six==1.17.0
     # via
@@ -90,9 +90,9 @@ tensorboard-data-server==0.7.2
     # via tensorboard
 tensorflow==2.19.0
     # via atem (setup.py)
-termcolor==2.5.0
+termcolor==3.0.1
     # via tensorflow
-typing-extensions==4.13.0
+typing-extensions==4.13.1
     # via
     #   optree
     #   tensorflow
