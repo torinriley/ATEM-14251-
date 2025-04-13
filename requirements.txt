@@ -37,7 +37,7 @@ keras==3.9.2
     # via tensorflow
 libclang==18.1.1
     # via tensorflow
-markdown==3.7
+markdown==3.8
     # via tensorboard
 markdown-it-py==3.0.0
     # via rich
@@ -61,7 +61,7 @@ numpy==2.1.3
     #   tensorflow
 opt-einsum==3.4.0
     # via tensorflow
-optree==0.14.1
+optree==0.15.0
     # via keras
 packaging==24.2
     # via
@@ -92,11 +92,11 @@ tensorflow==2.19.0
     # via atem (setup.py)
 termcolor==3.0.1
     # via tensorflow
-typing-extensions==4.13.1
+typing-extensions==4.13.2
     # via
     #   optree
     #   tensorflow
-urllib3==2.3.0
+urllib3==2.4.0
     # via requests
 werkzeug==3.1.3
     # via tensorboard
