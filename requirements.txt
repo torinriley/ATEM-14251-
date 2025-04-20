@@ -63,7 +63,7 @@ opt-einsum==3.4.0
     # via tensorflow
 optree==0.15.0
     # via keras
-packaging==24.2
+packaging==25.0
     # via
     #   keras
     #   tensorboard
