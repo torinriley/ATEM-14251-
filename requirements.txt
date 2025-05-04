@@ -13,7 +13,7 @@ astunparse==1.6.3
     # via tensorflow
 certifi==2025.4.26
     # via requests
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
 colorama==0.4.6
     # via atem (setup.py)
@@ -90,7 +90,7 @@ tensorboard-data-server==0.7.2
     # via tensorboard
 tensorflow==2.19.0
     # via atem (setup.py)
-termcolor==3.0.1
+termcolor==3.1.0
     # via tensorflow
 typing-extensions==4.13.2
     # via
