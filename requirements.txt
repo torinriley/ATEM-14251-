@@ -23,11 +23,11 @@ gast==0.6.0
     # via tensorflow
 google-pasta==0.2.0
     # via tensorflow
-grpcio==1.71.0
+grpcio==1.72.1
     # via
     #   tensorboard
     #   tensorflow
-h5py==3.13.0
+h5py==3.14.0
     # via
     #   keras
     #   tensorflow
@@ -92,7 +92,7 @@ tensorflow==2.19.0
     # via atem (setup.py)
 termcolor==3.1.0
     # via tensorflow
-typing-extensions==4.13.2
+typing-extensions==4.14.0
     # via
     #   optree
     #   tensorflow
