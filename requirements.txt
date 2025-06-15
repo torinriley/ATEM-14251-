@@ -11,7 +11,7 @@ absl-py==2.3.0
     #   tensorflow
 astunparse==1.6.3
     # via tensorflow
-certifi==2025.4.26
+certifi==2025.6.15
     # via requests
 charset-normalizer==3.4.2
     # via requests
@@ -23,7 +23,7 @@ gast==0.6.0
     # via tensorflow
 google-pasta==0.2.0
     # via tensorflow
-grpcio==1.72.1
+grpcio==1.73.0
     # via
     #   tensorboard
     #   tensorflow
@@ -74,7 +74,7 @@ protobuf==5.29.5
     #   tensorflow
 pygments==2.19.1
     # via rich
-requests==2.32.3
+requests==2.32.4
     # via tensorflow
 rich==14.0.0
     # via keras
