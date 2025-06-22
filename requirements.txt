@@ -37,7 +37,7 @@ keras==3.10.0
     # via tensorflow
 libclang==18.1.1
     # via tensorflow
-markdown==3.8
+markdown==3.8.2
     # via tensorboard
 markdown-it-py==3.0.0
     # via rich
@@ -72,7 +72,7 @@ protobuf==5.29.5
     # via
     #   tensorboard
     #   tensorflow
-pygments==2.19.1
+pygments==2.19.2
     # via rich
 requests==2.32.4
     # via tensorflow
@@ -96,7 +96,7 @@ typing-extensions==4.14.0
     # via
     #   optree
     #   tensorflow
-urllib3==2.4.0
+urllib3==2.5.0
     # via requests
 werkzeug==3.1.3
     # via tensorboard
