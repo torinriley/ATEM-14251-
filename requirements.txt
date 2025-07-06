@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-absl-py==2.3.0
+absl-py==2.3.1
     # via
     #   keras
     #   tensorboard
@@ -92,7 +92,7 @@ tensorflow==2.19.0
     # via atem (setup.py)
 termcolor==3.1.0
     # via tensorflow
-typing-extensions==4.14.0
+typing-extensions==4.14.1
     # via
     #   optree
     #   tensorflow
